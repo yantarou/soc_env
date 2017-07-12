@@ -1,0 +1,8 @@
+<network ipv6='yes'>
+    <name>soc7-public-floating-net</name>
+    <uuid>78775b4b-1ac5-4791-96e4-b9a8ead0836d</uuid>
+    <forward mode='nat'/>
+    <domain name='cloud.soc7.domain'/>
+    <ip address='192.168.126.1' netmask='255.255.255.0'>
+    </ip>
+</network>

@@ -1,0 +1,11 @@
+<network>
+    <name>soc7-admin-net</name>
+    <uuid>ee83cabc-03ae-4449-b187-6b97dff193fa</uuid>
+    <forward mode='nat'/>
+    <domain name='cloud.soc7.domain'/>
+    <ip address='192.168.124.1' netmask='255.255.255.0'>
+    <dhcp>
+        <range start='192.168.124.21' end='192.168.124.80'/>
+    </dhcp>
+    </ip>
+</network>
