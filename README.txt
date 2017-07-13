@@ -1,13 +1,9 @@
 SUSE OpenStack Cloud 7 - KVM Test Environment
 =============================================
 
-This repositories contains scripts and configuration to create a KVM-based
-SUSE OpenStack Cloud 7 environment.
+This repository contains scripts and configuration files to create a KVM-based SUSE OpenStack Cloud 7 environment.
 
-
-
-Administration Server
----------------------
+After installation of the administration node via the "install_soc7-admin.sh" script, the following manual steps have to be performed.
 
 SMT Configuration:
 
@@ -39,6 +35,6 @@ Direct root Login:
 
 https://www.suse.com/documentation/suse-openstack-cloud-7/book_cloud_deploy/data/sec_depl_inst_nodes_prep.html
 
-Set the default password for the nodes' root user to "root".
+Set the default password for all nodes' root user to "root".
 
 "root_password_hash": "$1$SDDuNjvR$6TiMRV0ECYPfraxF/Oquf0"
