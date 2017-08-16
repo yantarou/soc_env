@@ -1,0 +1,118 @@
+--- sample_network.json	2017-05-15 12:51:19.000000000 +0900
++++ network.json	2017-06-01 09:05:52.398246524 +0900
+@@ -6,6 +6,60 @@
+                     "conduit_list": {
+                         "intf0": {
+                             "if_list": [
++                                "1g1"
++                            ]
++                        },
++                        "intf1": {
++                            "if_list": [
++                                "1g1"
++                            ]
++                        },
++                        "intf2": {
++                            "if_list": [
++                                "1g1"
++                            ]
++                        },
++                        "intf3": {
++                            "if_list": [
++                                "1g1"
++                            ]
++                        }
++                    },
++                    "pattern": "team/1/.*"
++                },
++                {
++                    "conduit_list": {
++                        "intf0": {
++                            "if_list": [
++                                "1g1",
++                                "1g3"
++                            ]
++                        },
++                        "intf1": {
++                            "if_list": [
++                                "1g1",
++                                "1g3"
++                            ]
++                        },
++                        "intf2": {
++                            "if_list": [
++                                "1g1",
++                                "1g3"
++                            ]
++                        },
++                        "intf3": {
++                            "if_list": [
++                                "1g2",
++                                "1g4"
++                            ]
++                        }
++                    },
++                    "pattern": "team/.*/ceph-osd"
++                },
++                {
++                    "conduit_list": {
++                        "intf0": {
++                            "if_list": [
+                                 "1g1",
+                                 "1g2"
+                             ]
+@@ -61,6 +115,11 @@
+                             "if_list": [
+                                 "?1g1"
+                             ]
++                        },
++                        "intf3": {
++                            "if_list": [
++                                "?1g1"
++                            ]
+                         }
+                     },
+                     "pattern": "single/.*/.*"
+@@ -111,6 +170,15 @@
+             "interface_map": [
+                 {
+                     "bus_order": [
++                        "0000:00/0000:00:03.0/virtio0",
++                        "0000:00/0000:00:04.0/virtio0",
++                        "0000:00/0000:00:05.0/virtio0",
++                        "0000:00/0000:00:06.0/virtio0"
++                    ],
++                    "pattern": "Standard PC (i440FX + PIIX, 1996)"
++                },
++                {
++                    "bus_order": [
+                         "0000:00/0000:00:01",
+                         "0000:00/0000:00:03"
+                     ],
+@@ -173,7 +241,7 @@
+                     "pattern": "product"
+                 }
+             ],
+-            "mode": "single",
++            "mode": "team",
+             "networks": {
+                 "admin": {
+                     "add_bridge": false,
+@@ -307,7 +375,7 @@
+                 "storage": {
+                     "add_bridge": false,
+                     "broadcast": "192.168.125.255",
+-                    "conduit": "intf1",
++                    "conduit": "intf3",
+                     "mtu": 1500,
+                     "netmask": "255.255.255.0",
+                     "ranges": {
+@@ -323,7 +391,7 @@
+             },
+             "start_up_delay": 30,
+             "teaming": {
+-                "mode": 1
++                "mode": 0
+             }
+         }
+     }
